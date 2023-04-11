@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">laboratorio_04</string>
+    <string name="name">nombre</string>
+    <string name="email">Correo electronico</string>
+    <string name="number">Numero de telefono</string>
+    <string name="save">Guardar</string>
+</resources>

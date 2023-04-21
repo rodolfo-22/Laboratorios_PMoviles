@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Labo_03</string>
+    <string name="title">Cantidad de dinero</string>
+    <string name="total_count" />
 </resources>

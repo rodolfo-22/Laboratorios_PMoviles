@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundLayout"
+    tools:context=".Add_Movie_Fragment">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="@dimen/large_gap"
+        android:layout_height="@dimen/large_gap"
+        android:layout_marginTop="@dimen/normal_gap"
+        android:background="@drawable/rounded_button"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="*" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/extra_gap"
+        android:gravity="center"
+        android:text="@string/new_movie_title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.25">
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xlarge_gap"
+            android:layout_margin="@dimen/normal_gap"
+            android:background="@color/cardLayout"
+            android:hint="@string/hint_name"
+            android:padding="@dimen/normal_gap"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/edit_text_category"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xlarge_gap"
+            android:layout_margin="@dimen/normal_gap"
+            android:background="@color/cardLayout"
+            android:hint="@string/hint_category"
+            android:padding="@dimen/normal_gap"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/edit_text_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xlarge_gap"
+            android:layout_margin="@dimen/normal_gap"
+            android:background="@color/cardLayout"
+            android:hint="@string/hint_description"
+            android:padding="@dimen/normal_gap"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/edit_text_calification"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xlarge_gap"
+            android:layout_margin="@dimen/normal_gap"
+            android:background="@color/cardLayout"
+            android:hint="@string/hint_calification"
+            android:padding="@dimen/normal_gap"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="@dimen/normal_gap"
+        android:layout_marginEnd="158dp"
+        android:text="@string/btn_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

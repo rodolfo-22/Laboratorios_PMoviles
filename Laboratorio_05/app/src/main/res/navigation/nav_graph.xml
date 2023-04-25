@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/billBoard_Fragment">
+
+    <fragment
+        android:id="@+id/add_Movie_Fragment"
+        android:name="com.example.laboratorio_05.Add_Movie_Fragment"
+        android:label="fragment_add__movie_"
+        tools:layout="@layout/fragment_add__movie_" >
+        <action
+            android:id="@+id/action_add_Movie_Fragment_to_billBoard_Fragment"
+            app:destination="@id/billBoard_Fragment" />
+        <action
+            android:id="@+id/action_add_Movie_Fragment_to_billBoard_Fragment2"
+            app:destination="@id/billBoard_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/description_Fragment"
+        android:name="com.example.laboratorio_05.Description_Fragment"
+        android:label="fragment_description_"
+        tools:layout="@layout/fragment_description_" >
+        <action
+            android:id="@+id/action_description_Fragment_to_billBoard_Fragment"
+            app:destination="@id/billBoard_Fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/billBoard_Fragment"
+        android:name="com.example.laboratorio_05.BillBoard_Fragment"
+        android:label="fragment_bill_board_"
+        tools:layout="@layout/fragment_bill_board_"
+        >
+        <action
+            android:id="@+id/action_billBoard_Fragment_to_add_Movie_Fragment"
+            app:destination="@id/add_Movie_Fragment" />
+        <action
+            android:id="@+id/action_billBoard_Fragment_to_description_Fragment"
+            app:destination="@id/description_Fragment" />
+    </fragment>
+</navigation>

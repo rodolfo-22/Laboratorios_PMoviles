@@ -1,0 +1,37 @@
+1. ¿Qué ventajas tiene el utilizar LiveData?
+
+Garantiza que la IU coincida con el estado de los datos: al seguir el diseño observador.
+LiveData notifica a los objetos Observer cuando cambian los datos subyacentes.
+
+Sin fugas de memoria: Los observadores están vinculados a objetos Lifecycle y borran lo que crean cuando se
+destruye el ciclo de vida asociado
+
+Actividades detenidas para evitar las fallas: Si el ciclo de vida del observador está inactivo, como en el caso
+de una actividad de la pila de actividades, no recibe ningún evento de LiveData.
+
+No más control manual del ciclo de vida: Los componentes de IU solo observan los datos relevantes y no
+detienen ni reanudan la observación. 
+
+Datos siempre actualizados: Si un ciclo de vida queda inactivo, recibe los datos más recientes después de
+quedar activo de nuevo. 
+
+Cambios de configuración apropiados: Una actividad o un fragmento que se vuelve a crear debido a un
+cambio de configuración, recibe de inmediato los datos disponibles más
+recientes.
+
+
+2. ¿Qué patrón de diseño utiliza LiveData?
+Patrón Observer, en este patrón, un objeto, llamado sujeto, mantiene una lista de sus dependientes, llamados observadores, y los notifica automáticamente cuando se produce algún cambio en el estado del sujeto.
+
+3. Menciona que se debe agregar al Gradle para poder implementar
+DataBinding
+
+se debe abilitar el databinding dentro del Gradle como: 
+dataBinding {
+ enabled True
+ }
+
+4. ¿Qué es DataBinding? Menciona sus ventajas frente a findViewById
+Mantiene la comunicacion entre la interfaz de usuario y los datos a manejar en la app. Permite la actualización automática de la interfaz de usuario cuando los datos cambian y viceversa.
+
+Dentro de sus ventajas estan: que reduce la cantidad de codigo y facilita la actualizacion de la UI

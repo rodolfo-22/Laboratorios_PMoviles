@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.laboratorio_08.ui.movie.viewmodel.MovieViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundLayout"
+        tools:context=".ui.movie.MovieFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/height_image"
+            android:layout_height="@dimen/height_image"
+            android:layout_marginTop="@dimen/large_gap"
+            android:layout_marginBottom="@dimen/large_gap"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardCornerRadius="@dimen/extra_gap">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/height_image"
+                android:layout_height="@dimen/height_image"
+                android:layout_marginBottom="@dimen/large_gap"
+                android:src="@drawable/not_found"
+                android:contentDescription="@string/movie_description_image"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_gap"
+            android:layout_marginTop="@dimen/extra_gap"
+            android:layout_marginEnd="@dimen/normal_gap"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3">
+            <TextView
+                android:id="@+id/text_view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/lg_text_size"
+                tools:text="@string/star_wars_3_title"
+                android:text="@{viewmodel.name}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/m_text_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_gap"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_view_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/xlarge_gap"
+                    android:layout_weight="2"
+                    tools:text="Ciencia Ficcion"
+                    android:text="@{viewmodel.category}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/lg_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_view_qualification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/star_wars_3_calification"
+                    android:text="@{viewmodel.qualification}"
+                    android:textColor="@color/calification"
+                    android:textSize="@dimen/xlg_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/starwars_description"
+                android:text="@{viewmodel.description}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/m_text_size" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -12,7 +12,7 @@ class MovieRecylcerViewAdapter(
     private val clickListener: (MovieModel)-> Unit
 ): RecyclerView.Adapter<MovieRecyclerViewHolder>() {
     private val movies = ArrayList<MovieModel>()
-
+    //
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieRecyclerViewHolder {
         val binding = FragmentMovieItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MovieRecyclerViewHolder(binding)
